@@ -93,7 +93,8 @@ const Plugin = {
       },
       toggle (name, params) {
         Plugin.event.$emit('toggle', name, undefined, params)
-      }
+      },
+      event: Plugin.event,
     }
     /**
      * Sets custom component name (if provided)
