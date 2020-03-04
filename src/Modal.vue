@@ -514,6 +514,11 @@ export default {
       })
 
       this.$emit(beforeEventName, beforeEvent)
+      Modal.event.$emit(beforeEventName, {
+        beforeEvent,
+        params,
+        name: this.name,
+      })
 
       if (!stopEventExecution) {
         this.visible = nextState
